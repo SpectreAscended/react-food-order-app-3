@@ -15,8 +15,11 @@ const parentElement = document.getElementById('overlay-root');
 const Modal = props => {
   return (
     <>
-      {ReactDOM.createPortal(Backdrop, parentElement)}
-      {ReactDOM.createPortal(ModalOverlay, parentElement)}
+      {ReactDOM.createPortal(<Backdrop />, parentElement)}
+      {ReactDOM.createPortal(
+        <ModalOverlay>{props.children}</ModalOverlay>,
+        parentElement
+      )}
     </>
   );
 };
