@@ -15,7 +15,6 @@ const HeaderCartButton = props => {
 
   useEffect(() => {
     setButtonBump(true);
-    console.log(items);
     const timer = setTimeout(() => {
       setButtonBump(false);
     }, 300);
@@ -27,7 +26,7 @@ const HeaderCartButton = props => {
 
   return (
     <button
-      className={`${classes.button} ${buttonBump ? classes.bump : ''} `}
+      className={`${classes.button} ${buttonBump ? classes.bump : ''}`}
       onClick={props.onShowModal}
     >
       <div className={classes.icon}>
