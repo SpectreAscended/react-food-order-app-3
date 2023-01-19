@@ -2,10 +2,12 @@ import React from 'react';
 import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 import headerImg from '../../assets/meals.jpg';
+import Cart from '../Cart/Cart';
 
 const Header = () => {
   return (
     <>
+      <Cart />
       <header className={classes.header}>
         <h1>ReactMeals</h1>
         <HeaderCartButton />
