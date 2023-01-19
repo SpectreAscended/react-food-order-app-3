@@ -12,8 +12,6 @@ const HeaderCartButton = props => {
     return curNumber + item.amount;
   }, 0);
 
-  console.log(numberOfCartItems);
-
   return (
     <button className={classes.button} onClick={props.onShowModal}>
       <div className={classes.icon}>
