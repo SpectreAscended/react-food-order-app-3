@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 
 const Cart = props => {
   return (
-    <Modal>
+    <Modal onShowModal={props.onShowModal}>
       <ul className={classes['cart-items']}>
         <CartItem name="Sushi" amount="1" price={12.99} />
       </ul>
@@ -14,7 +14,9 @@ const Cart = props => {
         <span>$65.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Close</button>
+        <button className={classes['button--alt']} onClick={props.onShowModal}>
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
