@@ -4,8 +4,6 @@ import DUMMY_MEALS from '../../store/dummyData';
 import Card from '../UI/Card';
 import MealItem from './MealItems/MealItem';
 
-console.log(DUMMY_MEALS);
-
 const AvailableMeals = props => {
   const meals = DUMMY_MEALS.map(meal => (
     <MealItem
