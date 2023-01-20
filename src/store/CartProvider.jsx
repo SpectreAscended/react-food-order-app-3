@@ -41,7 +41,7 @@ const cartReducer = (state, action) => {
 
     return {
       items: updatedItems,
-      totalAmount: updatedTotalAmount,
+      totalAmount: Math.abs(updatedTotalAmount),
     };
   }
 
@@ -66,7 +66,7 @@ const cartReducer = (state, action) => {
     updatedTotal = state.totalAmount - existingItem.price;
     return {
       items: updatedItems,
-      totalAmount: updatedTotal,
+      totalAmount: Math.abs(updatedTotal),
     };
   }
 
@@ -89,7 +89,7 @@ const CartProvider = props => {
 
   const cartContext = {
     items: cartState.items,
-    totalAmount: cartState.totalAmount,
+    totalAmount: cartState.totalAmount.toFixed(2),
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
